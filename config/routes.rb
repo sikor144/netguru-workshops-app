@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   resources :students do
     get :subjects
   end
-  resources :teachers
+  resources :teachers do
+    resources :subjects
+  end
   resources :reports
 
-  get "/reports/subjects" => "reports#subject", as: "report_subjects"
+  get "/reports/subjects" => "reports#subjects", as: "report_subjects"
   root to: 'visitors#index'
 end
