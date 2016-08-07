@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get :subjects
   end
   resources :teachers do
-    resources :subjects
+    get :subjects
   end
   resources :reports
 
