@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root to: 'visitors#index'
+  get "/reports/subjects" => "reports#subjects", as: "report_subjects"
+
   devise_for :users
 
   resources :students do
@@ -9,6 +12,4 @@ Rails.application.routes.draw do
   end
   resources :reports
 
-  get "/reports/subjects" => "reports#subjects", as: "report_subjects"
-  root to: 'visitors#index'
 end
