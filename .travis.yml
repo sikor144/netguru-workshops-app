@@ -2,7 +2,6 @@ language: ruby
 rvm:
   - 2.2.3
 before_install:
-  - psql createuser -s workshops
   - psql -c 'create database workshops_test;' -U postgres
   - cp config/database.yml.sample config/database.yml
 addons:
