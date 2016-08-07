@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     get :subjects
   end
   resources :reports
+  resources :student_payments
 
 end

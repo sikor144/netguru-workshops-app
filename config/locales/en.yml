@@ -1,6 +1,7 @@
 en:
   navbar:
     students: Students
+    student_payments: Payments
     teachers: Teachers
     reports: Reports
     reports_subjects: Subjects
@@ -24,6 +25,11 @@ en:
       first_name: first name
       last_name: last name
       birthdate: birth date
+  student:
+    columns:
+      amount: amount
+      due_date: due date
+      payment_date: payment date
   teacher:
     columns:
       first_name: first name

@@ -11,6 +11,11 @@ crumb :student do |student|
   parent :students
 end
 
+crumb :student_payments do
+  link "Payments", student_payments_path
+  parent :students
+end
+
 crumb :student_subjects do |student|
   link "#{student.first_name} #{student.last_name} #{t('shared.subjects')}", student_subjects_path(student)
   parent :students
