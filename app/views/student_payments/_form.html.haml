@@ -1,0 +1,8 @@
+= simple_form_for student_payment do |f|
+  = f.input :amount
+  = f.input :due_date, as: :datetime
+  = f.input :payment_date, as: :datetime
+  = f.association :student, collection: students, prompt: "Choose a student", label_method: :last_name
+  %br
+  = link_to t('shared.back'), student_payments_path, class: 'btn btn-default'
+  = f.button :submit

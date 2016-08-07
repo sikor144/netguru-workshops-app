@@ -1,6 +1,7 @@
 class StudentPaymentsController < ApplicationController
   expose(:student_payments)
   expose(:student_payment, attributes: :student_payment_params)
+  expose(:students)
 
   before_action :authenticate_user!
 
@@ -28,6 +29,6 @@ class StudentPaymentsController < ApplicationController
   private
 
   def student_payment_params
-    params.require(:student_payment).permit(:first_name, :last_name, :birthdate, subject_item_ids: [])
+    params.require(:student_payment).permit(:amount, :due_date, :payment_date, :student_id)
   end
 end

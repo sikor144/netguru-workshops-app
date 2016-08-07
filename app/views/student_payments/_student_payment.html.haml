@@ -1,7 +1,8 @@
 %tr
-  %td= student.amount
-  %td= student.due_date
-  %td= student.payment_date
+  %td= student_payment.amount
+  %td= student_payment.due_date
+  %td= student_payment.payment_date
+  %td= student_payment.student.last_name
   %td
     = link_to student_payment_path(student_payment), { title: t('shared.show') } do
       %button.btn.btn-default

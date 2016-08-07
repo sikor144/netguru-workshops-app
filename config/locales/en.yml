@@ -25,11 +25,12 @@ en:
       first_name: first name
       last_name: last name
       birthdate: birth date
-  student:
+  student_payment:
     columns:
       amount: amount
       due_date: due date
       payment_date: payment date
+      student: student
   teacher:
     columns:
       first_name: first name

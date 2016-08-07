@@ -1,0 +1,17 @@
+- breadcrumb :student_payment, student_payment
+%table.table.table-condensed
+  %tbody
+    %tr
+      %td= "#{t('student_payment.columns.amount')}:"
+      %td= student_payment.amount
+    %tr
+      %td= "#{t('student_payment.columns.due_date')}:"
+      %td= student_payment.due_date
+    %tr
+      %td= "#{t('student_payment.columns.payment_date')}:"
+      %td= student_payment.payment_date
+    %tr
+      %td= "#{t('student_payment.columns.student')}:"
+      %td= student_payment.student.last_name
+
+= link_to t('shared.back'), student_payments_path, class: 'btn btn-default'
